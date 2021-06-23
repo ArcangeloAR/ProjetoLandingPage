@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .w-55px {
+            width: 55px;
+        }
+
+        .moreInformation {
+            display: none;
+        }
+
+        .btnMore:hover {
+            border: black 1px solid;
+            box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 grey;
+            opacity: 1;
+            transition: all 0.2s;
+        }
+
+        .borda-imagem-herois:hover {
+            border: gold 3px solid;
+            box-shadow: 0 4px 8px 0 white, 0 3px 10px 0 grey;
+            opacity: 1;
+            transition: all 0.2s;
+        }
+
+        .borda-imagem-viloes:hover {
+            border: blueviolet 3px solid;
+            box-shadow: 0 8px 16px 0 white, 0 6px 20px 0 grey;
+            opacity: 1;
+            transition: all 0.2s;
+        }
+
+        .posicaoNav {
+            top: 0px;
+            position: sticky;
+            z-index: 1;
+        }
+
+        .dropdown .dropdown-menu a:hover {
+            background-color: #0069D9;
+
+        }
+    </style>
+
+    <title>DC Comics</title>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark posicaoNav">
+        <a class="navbar-brand" href="index.html"><img src="assets/media/imgs/dc.png" class="w-55px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Herois
+                    </a>
+                    <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-white" href="#imageSuperman">Super-Homem</a>
+                        <a class="dropdown-item text-white" href="#imageBatman">Batman</a>
+                        <a class="dropdown-item text-white" href="#imageWonderWoman">Mulher-Maravilha</a>
+                        <a class="dropdown-item text-white" href="#imageCyborg">Ciborgue</a>
+                        <a class="dropdown-item text-white" href="#imageGreenLantern">Lanterna Verde</a>
+                        <a class="dropdown-item text-white" href="#imageZatanna">Zatanna</a>
+                        <a class="dropdown-item text-white" href="#imageAquaman">Aquaman</a>
+                        <a class="dropdown-item text-white" href="#imageFlash">Flash</a>
+                        <a class="dropdown-item text-white" href="#imageHuntress">Caçadora</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#footer">Contato<span class="sr-only"></span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- /NavBar -->
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#herois"><img class="d-block w-100" src="assets/media/imgs/dc-wallpaper.png"
+                        alt="Primeiro Slide - Imagem com a Logo da DC"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#herois"><img class="d-block w-100" src="assets/media/imgs/heroes.png"
+                        alt="Segundo Slide - Imagem com a Liga da Justiça"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#herois"><img class="d-block w-100" src="assets/media/imgs/villains.png"
+                        alt="Terceiro Slide - Imagem com a Legião do Mal"></a>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+    <!-- /Carousel -->
+
+    <!-- Jumbo -->
+    <div class="jumbotron">
+        <h1 class="display-4">Conheça a DC Comics</h1>
+        <p class="lead">A melhor editora de quadrinhos do mundo, dona de sucessos como Liga da Justiça, Watchmen, V de
+            Vingança e Sandman.
+            informação.</p>
+        <hr class="my-4">
+        <p>Principais sagas e títulos da editora:</p>
+        <ul>
+            <div class="row">
+                <div class="col-md-4">
+                    <li>Crise nas Infinitas Terras</li>
+                    <li>O Reino do Amanhã</li>
+                    <li>O Cavaleiro das Trevas</li>
+                    <li>Ponto de Ignição</li>
+                    <li>Crise Infinita</li>
+                    <li>LJA vs. Vingadores</li>
+                </div>
+                <div class="col-md-4">
+                    <li>O Relógio do Juízo Final</li>
+                    <li>Superman: Doomed</li>
+                    <li>Os Novos 52</li>
+                    <li>Vilania Eterna</li>
+                    <li>Guerra de Darkseid</li>
+                    <li>Guerra dos Robins</li>
+                </div>
+                <div class="col-md-4">
+                    <li>Batman: Ano Zero</li>
+                    <li>Trono de Atlântida </li>
+                    <li>DC vs. Marvel</li>
+                    <li>Lanterna Verde: Lights Out</li>
+                    <li>Noite Mais Densa</li>
+                    <li>Batman: Silêncio</li>
+                </div>
+            </div>
+        </ul>
+        <a class="btn btn-primary btn-lg pt-2" href="https://www.dccomics.com/" role="button">Conheça mais</a>
+    </div>
+    <!-- /Jumbo -->
+
+    <div class="container">
+
+        <h2 id="herois" class="mb-3">Principais Heróis</h2>
+
+        <!-- Cards Herois -->
+        <div class="card-columns">
+            <div class="card" id="imageSuperman">
+                <a href="https://www.dccomics.com/characters/superman" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/superman.png"
+                        alt="Imagem de capa do card"></a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Super-Homem</h5>
+                    <span id="spanSuperman">
+                        <p class="card-text text-justify">
+                            Mais rápido do que uma bala em alta velocidade, mais poderoso do que uma locomotiva ... O
+                            Homem
+                            de Aço trava uma batalha sem fim pela verdade, pela justiça e pelo jeito americano.
+                        </p>
+                    </span>
+                    <span id="moreSuperman" class="moreInformation">
+                        <p class="card-text text-justify">
+                            De seu uniforme azul a sua capa vermelha esvoaçante e o escudo "S" em seu peito, Superman é
+                            um
+                            dos super-heróis DC mais imediatamente reconhecíveis e amados de todos os tempos. O Homem de
+                            Aço
+                            é o símbolo máximo da verdade, justiça e esperança. Ele é o primeiro super-herói do mundo e
+                            um
+                            guia para todos.
+                        </p>
+                        <p class="card-text text-justify">
+                            A ponta da lança em uma revolução que mudaria a paisagem da cultura pop, Superman passou os
+                            últimos oitenta anos redefinindo o que significa defender a verdade, a justiça e o jeito
+                            americano. O último sobrevivente do condenado planeta Krypton, criado no tranquilo coração
+                            de
+                            Smallville, Kansas, Superman é tanto uma lenda quanto um homem: o padrão ouro de heroísmo,
+                            compaixão e responsabilidade.
+                        </p>
+                        <p class="card-text text-justify">
+                            Embora seus poderes o tornem semelhante a um deus ao lado de seus compatriotas humanos, a
+                            história do Superman não é de ganância ou conquista. Em vez disso, ele se esforça para
+                            representar a bondade inerente do espírito humano e a capacidade de todas as coisas vivas de
+                            fazer o que é certo com seus vizinhos.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoSuperman()" id="btnSuperman" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageCyborg">
+                <a href="https://www.dccomics.com/characters/cyborg" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/cyborg.png"
+                        alt="Imagem do Ciborgue"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Ciborgue</h5>
+                    <span id="spanCyborg">
+                        <p class="card-text text-justify">
+                            Parte homem, parte máquina, Vic Stone é um ex-membro dos Teen Titans e um atual membro da
+                            Liga
+                            da Justiça que luta para preservar sua humanidade a cada nova atualização.
+                        </p>
+                    </span>
+                    <span id="moreCyborg" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Embora sempre tenha exibido um intelecto de gênio, o jovem Victor Stone não queria uma vida
+                            dedicada à ciência e à pesquisa como seus pais. Em vez disso, Vic sonhava em ser jogador de
+                            futebol e dedicou todo o seu tempo para se tornar um atleta famoso enquanto ainda estava no
+                            colégio. Mas uma reviravolta trágica do destino que deveria tê-lo deixado morto, em vez
+                            disso, o
+                            encontrou se tornando parte homem e parte máquina - um Cyborg.
+                        </p>
+                        <p class="card-text text-justify">
+                            Salvo por seu pai cientista após um acidente que deixou muito pouco do corpo de Victor
+                            intacto,
+                            o Dr. Silas Stone usou todo o seu conhecimento científico avançado para salvar a vida de seu
+                            único filho e reconstruí-lo em um ser superior, que era indiscutivelmente agora mais uma
+                            máquina
+                            do que o homem. Como um ciborgue, Vic era agora muito mais forte do que a pessoa média,
+                            podia
+                            interagir com computadores e emitir vários tipos de energia que o tornavam um lutador
+                            formidável. Embora tenha escolhido o caminho do super-herói, Victor nunca se acostumou
+                            totalmente a ser apenas parcialmente humano. Ele sempre carregou uma tristeza dentro de si
+                            enquanto lamenta pela vida normal que nunca teve.
+                        </p>
+                        <p class="card-text text-justify">
+                            Um dos maiores heróis do planeta, Cyborg, no entanto, coloca todas as suas lutas internas de
+                            lado quando chega a hora de salvar vidas inocentes e proteger a Terra. Por causa de sua
+                            capacidade de interagir com sistemas de computador, talvez não haja herói mais adequado para
+                            esta era digital moderna.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoCyborg()" id="btnCyborg" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageAquaman">
+                <a href="https://www.dccomics.com/characters/aquaman" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/aquaman.png"
+                        alt="Imagem do Aquaman"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Aquaman</h5>
+                    <span id="spanAquaman">
+                        <p class="card-text text-justify">
+                            Filho de um faroleiro e de uma rainha atlante, Arthur Curry é a ponte entre o mundo da
+                            superfície e seu tumultuoso reino do mar.
+                        </p>
+                    </span>
+                    <span id="moreAquaman" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Monarca do reino submarino de Atlântida e Rei dos Sete Mares, Aquaman é um dos mais
+                            poderosos
+                            Super-Heróis da DC - comandando um reino que cobre três quartos da superfície da Terra,
+                            incluindo todas as criaturas nele contidas. Arthur Curry veio de origens humildes, pois a
+                            maior
+                            parte de sua vida foi passada exilado de sua casa, sem saber de suas origens nobres. Quando
+                            ele
+                            finalmente assumiu o trono como um adulto, ele se tornou o rei mais lendário da história da
+                            Atlântida.
+                        </p>
+                        <p class="card-text text-justify">
+                            Membro fundador da Liga da Justiça da América, Aquaman lutou ao lado do Superman, do Batman
+                            e da
+                            Mulher Maravilha e se defendeu das maiores ameaças que o universo já viu. Apesar de ser mal
+                            interpretado por muitos como alguém que apenas "fala para pescar", a superforça e destreza
+                            de
+                            luta de Aquaman por si só o tornam uma força a ser reconhecida. Suas habilidades telepáticas
+                            o
+                            tornam uma das mentes mais poderosas do planeta. Se alguém opta por subestimar o rei do mar,
+                            o
+                            faz por sua própria conta e risco.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoAquaman()" id="btnAquaman" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageBatman">
+                <a href="https://www.dccomics.com/characters/batman" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/batman.png"
+                        alt="Imagem do Batman"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Batman</h5>
+                    <span id="spanBatman">
+                        <p class="card-text text-justify">
+                            No nome de seus pais assassinados, Bruce Wayne trava uma guerra eterna contra os criminosos
+                            de Gotham City. Ele é a vingança. Ele é a noite. Ele é o Batman.
+                        </p>
+                    </span>
+                    <span id="moreBatman" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Um dos personagens fictícios mais icônicos do mundo, Batman dedicou sua vida a uma cruzada
+                            sem
+                            fim, uma guerra contra todos os criminosos em nome de seus pais assassinados, que foram
+                            tirados
+                            dele quando ele era apenas uma criança. Desde aquela noite trágica, ele treinou seu corpo e
+                            mente para quase a perfeição física para se tornar um super-herói que se fez sozinho. Ele
+                            desenvolveu um arsenal de tecnologia que envergonharia a maioria dos exércitos. E ele montou
+                            equipes de seus colegas Super-heróis da DC, como a Liga da Justiça, os Outsiders e Batman,
+                            Incorporated.
+                        </p>
+                        <p class="card-text text-justify">
+                            Um playboy bilionário de dia, a vida dupla de Bruce Wayne proporciona a ele o conforto de
+                            uma
+                            vida sem preocupações financeiras, um mordomo leal que se tornou guardião e a base perfeita
+                            de
+                            operações na antiga rede de cavernas sob a extensa propriedade de sua família. À noite, no
+                            entanto, ele deixa de lado todo o fingimento, veste sua icônica capa recortada e capuz
+                            pontiagudo e sai para as ruas, céus e telhados sombrios de Gotham City.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoBatman()" id="btnBatman" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageGreenLantern">
+                <a href="https://www.dccomics.com/characters/john-stewart" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/green-lantern.png"
+                        alt="Imagem do Lanterna Verde"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Lanterna Verde</h5>
+                    <span id="spanGreenLantern">
+                        <p class="card-text text-justify">
+                            O terceiro humano a empunhar um anel do Lanterna Verde, a liderança e o brilhantismo tático
+                            de
+                            John Stewart são lendários em todos os setores da galáxia.
+                        </p>
+                    </span>
+                    <span id="moreGreenLantern" class="moreInformation">
+                        <p class="card-text text-justify">
+                            A Terra produziu muitos membros excelentes do Green Lantern Corps, mas entre seus melhores
+                            está
+                            o veterano dos Fuzileiros Navais dos EUA, John Stewart. Embora ele tenha sido originalmente
+                            escolhido pelos Guardiões do Universo como o Lanterna "alternativo", chamado para usar o
+                            anel de
+                            poder sempre que Hal Jordan ficava incapacitado, Stewart cresceu e se tornou um líder do
+                            Corpo
+                            dos Lanternas Verdes.
+                        </p>
+                        <p class="card-text text-justify">
+                            Um ex-arquiteto, Stewart cria suas construções de anéis de poder diferentemente dos seus
+                            companheiros Lanternas, já que elas nunca são ocas. Ele sempre os constrói de dentro para
+                            fora,
+                            até a última porca e parafuso - o resultado de sua mente arquitetônica apurada. Stewart
+                            também
+                            difere de alguns dos outros Lanternas Verdes da Terra porque optou por não esconder sua
+                            identidade por trás de uma máscara.
+                        </p>
+                        <p class="card-text text-justify">
+                            John Stewart sofreu inúmeras tragédias em sua vida. Mas ele sempre os superou e emergiu
+                            ainda
+                            mais dedicado aos ideais que o Corpo dos Lanternas Verdes representa.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoGreenLantern()" id="btnGreenLantern"
+                            class="mt-2 btn btn-secondary btnMore">Leia Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageFlash">
+                <a href="https://www.dccomics.com/characters/the-flash" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/flash.png"
+                        alt="Imagem do Flash"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Flash</h5>
+                    <span id="spanFlash">
+                        <p class="card-text text-justify">
+                            Três homens detêm o título de "O homem mais rápido do mundo" - ​​Jay Garrick, Barry Allen e
+                            Wally West.
+                            Cada um deles redefiniu a palavra "herói".
+                        </p>
+                    </span>
+                    <span id="moreFlash" class="moreInformation">
+                        <p class="card-text text-justify">
+                            O misterioso poder conhecido como Speed ​​Force é um campo de energia que, ao longo dos
+                            séculos,
+                            concedeu incríveis poderes de velocidade a certos heróis. O mais famoso deles é o Flash,
+                            também
+                            conhecido como Fastest Man Alive. Desde os dias da Segunda Guerra Mundial, existe um homem
+                            vestido de vermelho que pode correr a velocidades impossíveis, usando seu poder para salvar
+                            vidas e defender aqueles que não podem se defender. Tudo entre segundos.
+                        </p>
+                        <p class="card-text text-justify">
+                            Na década de 1940, o estudante universitário Jay Garrick adquiriu suas habilidades de
+                            supervelocidade em um acidente de laboratório aleatório e se tornou o primeiro super-herói
+                            DC a
+                            atender pelo nome de Flash. Anos mais tarde, Jay foi sucedido pelo cientista policial Barry
+                            Allen, até que o ex-parceiro infantil de Barry, Wally West, assumiu o manto em um momento em
+                            que
+                            Barry foi considerado morto. Mas, quando Barry voltou, ele se tornou o Flash mais uma vez.
+                            Todas
+                            as três gerações de speedters foram membros fundamentais da Sociedade da Justiça e da Liga
+                            da
+                            Justiça.
+                        </p>
+                        <p class="card-text text-justify">
+                            O Flash domina não apenas a velocidade, mas o próprio tempo, e ele costuma usar seus poderes
+                            para viajar por diferentes eras e até mesmo por outras dimensões. Embora o Flash nem sempre
+                            tenha sido rápido o suficiente para superar a tragédia pessoal quando chega para ele, ele
+                            sempre
+                            faz o possível para evitar que o mesmo aconteça com as pessoas de Central City e Keystone
+                            City.
+                            Ao fazer isso, ele ganhou um lugar entre os maiores super-heróis que o Universo DC já
+                            conheceu.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoFlash()" id="btnFlash" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageWonderWoman">
+                <a href="https://www.dccomics.com/characters/wonder-woman" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/wonder-woman.png"
+                        alt="Imagem da Mulher Maravilha"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Mulher Maravilha</h5>
+                    <span id="spanWonderWoman">
+                        <p class="card-text text-justify">
+                            Bela como Afrodite, sábia como Atenas, mais rápida que Hermes e mais forte que Hércules, a
+                            princesa Diana de Themyscira luta pela paz no mundo dos homens.
+                        </p>
+                    </span>
+                    <span id="moreWonderWoman" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Uma das mais amadas e icônicas super-heróis da DC de todos os tempos, a Mulher Maravilha se
+                            manteve por quase oitenta anos como um símbolo da verdade, justiça e igualdade para as
+                            pessoas
+                            em todos os lugares. Criada na ilha oculta de Themyscira, também conhecida como Ilha do
+                            Paraíso,
+                            Diana é uma amazona, como as figuras da lenda grega, e um presente de seu povo para a
+                            humanidade.
+                        </p>
+                        <p class="card-text text-justify">
+                            Como emissária de Themyscira para o mundo do homem, Diana assumiu o dever de dar o exemplo,
+                            mesmo que as diferenças entre seu local de nascimento e seu novo lar às vezes representem
+                            obstáculos para ela pular. Ela passou a representar a possibilidade e o potencial de uma
+                            vida
+                            sem guerra, ódio ou violência, e ela é um farol de esperança para todos os que se encontram
+                            em
+                            necessidade. Ela é igual entre os super-heróis mais poderosos, com um propósito de proteger
+                            o
+                            mundo da injustiça em todas as formas.
+                        </p>
+                        <p class="card-text text-justify">
+                            O trabalho de Diana, entretanto, é tudo menos fácil. Constantemente dividida entre sua
+                            missão de
+                            promover a paz e sua necessidade de lutar contra a violência generalizada de seu novo lar,
+                            Diana
+                            luta para caminhar na linha entre sua força de guerreira e compaixão sem fim a cada dia.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoWonderWoman()" id="btnWonderWoman"
+                            class="mt-2 btn btn-secondary btnMore">Leia Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageZatanna">
+                <a href="https://www.dccomics.com/characters/zatanna" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/zatanna.png"
+                        alt="Imagem da Zatanna"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Zatanna</h5>
+                    <span id="spanZatanna">
+                        <p class="card-text text-justify">
+                            Com um nome como Zatanna Zatara, tornar-se um mágico de palco profissional quase parece uma
+                            escolha de carreira inquestionável. Claro, não faz mal que as ilusões que ela cria e os
+                            feitiços que ela tece para deslumbrar o público sejam reais.
+                        </p>
+                    </span>
+                    <span id="moreZatanna" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Inteligente, confiante, autoconfiante e capaz de manipular a própria realidade com suas
+                            vastas habilidades mágicas, Zatanna equilibra seu tempo como uma habilidosa ilusionista de
+                            palco lutando contra as artes das trevas ao lado de alguns dos maiores super-heróis do
+                            mundo. Ao recitar feitiços de trás para frente, ela pode invocar qualquer coisa que sua
+                            imaginação desejar, e sua inventividade frequentemente permite que ela encontre soluções
+                            criativas até mesmo para os problemas mais complicados.
+                        </p>
+                        <p class="card-text text-justify">
+                            No entanto, Zatanna conhece os perigos da magia, tendo perdido seu pai para as artes das
+                            trevas. Embora isso a tenha deixado sem um mentor e relativamente inexperiente no mundo da
+                            magia, isso apenas aumentou sua resolução de se posicionar contra qualquer um que busque
+                            usar magia às custas de outros. Mas se Zatanna espera escapar do destino de seu pai, ela
+                            terá que dominar rapidamente seu ofício antes de enfrentar os místicos mais poderosos do
+                            mundo.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoZatanna()" id="btnZatanna" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="imageHuntress">
+                <a href="https://www.dccomics.com/characters/huntress" target="_blank"><img
+                        class="card-img-top borda-imagem-herois" src="assets/media/imgs/huntress.png"
+                        alt="Imagem do Flash"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Caçadora</h5>
+                    <span id="spanHuntress">
+                        <p class="card-text text-justify">
+                            Uma guerreira urbana empunhando uma besta e um membro importante das Aves de Rapina, a
+                            caçadora mira contra o crime no coração escuro da cidade.
+                        </p>
+                    </span>
+                    <span id="moreHuntress" class="moreInformation">
+                        <p class="card-text text-justify">
+                            Nascida em uma teia caótica de famílias mafiosas em guerra em Gotham City, a vida de Helena
+                            Bertinelli sempre foi uma confusão de extremos violentos. Aos oito anos, presenciou o
+                            assassinato de sua mãe, pai e irmão, fato que a deixou aos cuidados de seu tio na Sicília.
+                            Ele ensinou a ela o código pelo qual ela viveria: "Sangue clama por sangue". Para que Helena
+                            pudesse continuar com sua vida, ela teria que se vingar dos responsáveis ​​pelo assassinato
+                            de sua família.
+                        </p>
+                        <p class="card-text text-justify">
+                            Depois de passar seus primeiros anos de treinamento na adolescência, ela voltou para Gotham
+                            City, apenas para descobrir a verdadeira profundidade da corrupção da Máfia. Depois de
+                            testemunhar o Batman em ação, Helena jurou seguir seu exemplo e purificar a cidade da
+                            corrupção por qualquer meio necessário - mesmo que isso significasse cruzar as linhas que o
+                            Batman não faria.
+                        </p>
+                        <p class="card-text text-justify">
+                            Pega em uma luta entre sua raiva e seu papel como uma super-heroína da DC, Huntress passou a
+                            representar os tons mais escuros de cinza em Gotham.
+                        </p>
+                    </span>
+                    <div class="d-flex justify-content-end">
+                        <button onclick="infoHuntress()" id="btnHuntress" class="mt-2 btn btn-secondary btnMore">Leia
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Cads Herois -->
+
+    <hr>
+
+    <!-- Texto e Vídeo -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="pb-2 d-flex justify-content-center">
+                    Sinopse e Trailer Filme Liga da Justiça
+                </h3>
+            </div>
+        </div>
+        <div class="row mt-2 mb-2">
+            <div class="col-md-6">
+                <p class="text-justify">
+                    Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman,
+                    Bruce Wayne convoca sua nova aliada Diana Prince para o combate contra um inimigo ainda maior,
+                    recém-despertado. Juntos, Batman e Mulher-Maravilha buscam e recrutam com agilidade um time de
+                    meta-humanos, mas mesmo com a formação da liga de heróis sem precedentes o ataque ao planeta ainda
+                    pode ser catastrófico.
+                </p>
+                <p class="text-justify">
+                    Ao lado, é possível assistir ao trailer do filme que foi lançado em 18 de março de 2021 no HBO Max.
+                    Liga da Justiça - Snyder Cut é um marco na cultura popular, goste ou não. A produção representa uma
+                    grande vitória dos fãs que pediram na internet por meio de campanhas e petições para que a Warner
+                    lançasse a versão de Zack Snyder para o filme Liga da Justiça (2017) – muito criticado por público e
+                    crítica na época. Para quem não se lembra, o diretor abandonou o projeto em 2016 devido ao suicídio
+                    de sua filha e, com isso, Joss Whedon assumiu o controle criativo de Liga da Justiça, regravando
+                    diversas cenas e modificando a obra por completo.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <iframe width="575" height="375" src="https://www.youtube.com/embed/jt3-3LtSj6c"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- /Texto e Vídeo -->
+
+    <hr>
+
+    <!-- Formulário -->
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h3>Entre em contato para mais informações:</h3>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">
+                    </div>
+                    <div>
+                        <label for="exampleFormControlInput1">Endereço de e-mail:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput2"
+                            placeholder="nome@exemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Mensagem:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <iframe class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13207.638437819074!2d-118.3387185!3d34.1486546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xca5c2637d3eec233!2sDC%20Comics%20Headquarters!5e0!3m2!1spt-BR!2sbr!4v1624382577041!5m2!1spt-BR!2sbr"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- /Formulário -->
+
+    <hr>
+    <!-- Footer -->
+    <footer class="bg-secondary" id="footer">
+        <div class="row mb-3">
+            <div class="col-md-12 d-flex justify-content-center">
+                <a href="https://www.linkedin.com/in/angelo-ruggiero-arcangelo/" target="_blank" class="p-3">
+                    <img class="w-55px" src="assets/media/imgs/linkedin.png" alt="Logo do Linkedin">
+                </a>
+                <a href="https://github.com/ArcangeloAR" target="_blank" class="p-3">
+                    <img class="w-55px" src="assets/media/imgs/github.png" alt="Logo do Github">
+                </a>
+            </div>
+            <div class="col-md-12">
+                <p class="text-center">
+                    Todos os direitos reservados: ArcangeloAR &copy;
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function infoSuperman() {
+            var spanSuperman = document.getElementById("spanSuperman");
+            var moreSuperman = document.getElementById("moreSuperman");
+            var btnSuperman = document.getElementById("btnSuperman");
+
+            if (spanSuperman.style.display === "none") {
+                spanSuperman.style.display = "inline";
+                btnSuperman.innerHTML = "Leia Mais";
+                moreSuperman.style.display = "none";
+            } else {
+                spanSuperman.style.display = "none";
+                btnSuperman.innerHTML = "Leia Menos";
+                moreSuperman.style.display = "inline";
+            }
+        }
+
+        function infoCyborg() {
+            var spanCyborg = document.getElementById("spanCyborg");
+            var moreCyborg = document.getElementById("moreCyborg");
+            var btnCyborg = document.getElementById("btnCyborg");
+
+            if (spanCyborg.style.display === "none") {
+                spanCyborg.style.display = "inline";
+                btnCyborg.innerHTML = "Leia Mais";
+                moreCyborg.style.display = "none";
+            } else {
+                spanCyborg.style.display = "none";
+                btnCyborg.innerHTML = "Leia Menos";
+                moreCyborg.style.display = "inline";
+            }
+        }
+
+        function infoBatman() {
+            var spanBatman = document.getElementById("spanBatman");
+            var moreBatman = document.getElementById("moreBatman");
+            var btnBatman = document.getElementById("btnBatman");
+
+            if (spanBatman.style.display === "none") {
+                spanBatman.style.display = "inline";
+                btnBatman.innerHTML = "Leia Mais";
+                moreBatman.style.display = "none";
+            } else {
+                spanBatman.style.display = "none";
+                btnBatman.innerHTML = "Leia Menos";
+                moreBatman.style.display = "inline";
+            }
+        }
+
+        function infoAquaman() {
+            var spanAquaman = document.getElementById("spanAquaman");
+            var moreAquaman = document.getElementById("moreAquaman");
+            var btnAquaman = document.getElementById("btnAquaman");
+
+            if (spanAquaman.style.display === "none") {
+                spanAquaman.style.display = "inline";
+                btnAquaman.innerHTML = "Leia Mais";
+                moreAquaman.style.display = "none";
+            } else {
+                spanAquaman.style.display = "none";
+                btnAquaman.innerHTML = "Leia Menos";
+                moreAquaman.style.display = "inline";
+            }
+        }
+
+        function infoGreenLantern() {
+            var spanGreenLantern = document.getElementById("spanGreenLantern");
+            var moreGreenLantern = document.getElementById("moreGreenLantern");
+            var btnGreenLantern = document.getElementById("btnGreenLantern");
+
+            if (spanGreenLantern.style.display === "none") {
+                spanGreenLantern.style.display = "inline";
+                btnGreenLantern.innerHTML = "Leia Mais";
+                moreGreenLantern.style.display = "none";
+            } else {
+                spanGreenLantern.style.display = "none";
+                btnGreenLantern.innerHTML = "Leia Menos";
+                moreGreenLantern.style.display = "inline";
+            }
+        }
+
+        function infoWonderWoman() {
+            var spanWonderWoman = document.getElementById("spanWonderWoman");
+            var moreWonderWoman = document.getElementById("moreWonderWoman");
+            var btnWonderWoman = document.getElementById("btnWonderWoman");
+
+            if (spanWonderWoman.style.display === "none") {
+                spanWonderWoman.style.display = "inline";
+                btnWonderWoman.innerHTML = "Leia Mais";
+                moreWonderWoman.style.display = "none";
+            } else {
+                spanWonderWoman.style.display = "none";
+                btnWonderWoman.innerHTML = "Leia Menos";
+                moreWonderWoman.style.display = "inline";
+            }
+        }
+
+        function infoFlash() {
+            var spanFlash = document.getElementById("spanFlash");
+            var moreFlash = document.getElementById("moreFlash");
+            var btnFlash = document.getElementById("btnFlash");
+
+            if (spanFlash.style.display === "none") {
+                spanFlash.style.display = "inline";
+                btnFlash.innerHTML = "Leia Mais";
+                moreFlash.style.display = "none";
+            } else {
+                spanFlash.style.display = "none";
+                btnFlash.innerHTML = "Leia Menos";
+                moreFlash.style.display = "inline";
+            }
+        }
+
+        function infoZatanna() {
+            var spanZatanna = document.getElementById("spanZatanna");
+            var moreZatanna = document.getElementById("moreZatanna");
+            var btnZatanna = document.getElementById("btnZatanna");
+
+            if (spanZatanna.style.display === "none") {
+                spanZatanna.style.display = "inline";
+                btnZatanna.innerHTML = "Leia Mais";
+                moreZatanna.style.display = "none";
+            } else {
+                spanZatanna.style.display = "none";
+                btnZatanna.innerHTML = "Leia Menos";
+                moreZatanna.style.display = "inline";
+            }
+        }
+
+        function infoHuntress() {
+            var spanHuntress = document.getElementById("spanHuntress");
+            var moreHuntress = document.getElementById("moreHuntress");
+            var btnHuntress = document.getElementById("btnHuntress");
+
+            if (spanHuntress.style.display === "none") {
+                spanHuntress.style.display = "inline";
+                btnHuntress.innerHTML = "Leia Mais";
+                moreHuntress.style.display = "none";
+            } else {
+                spanHuntress.style.display = "none";
+                btnHuntress.innerHTML = "Leia Menos";
+                moreHuntress.style.display = "inline";
+            }
+        }
+    </script>
+</body>
+
+</html>
